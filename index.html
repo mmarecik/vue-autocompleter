@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>Szukaj w Google</title>
+    <link rel="icon"  href="images_google/icon.png">
+    <link rel="stylesheet" type="text/css" href="autocompleter.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./cities.js"></script>
+    <script src="./autocompleter.js"></script>
+  </head>
+
+  <body> 
+    <div id="app" :class="[change_class == 1 ? 'results' : 'home']">
+      <div id="top">
+        <v-autocompleter v-model="googleSearch" :options="cities" @enter="showResults"></v-autocompleter>
+      </div>
+    </div>
+</body>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      enterValues: [],
+      cities: window.cities,
+      change_class: 0,
+      googleSearch: '',
+    },
+    methods: {
+      showResults(newValue) {
+        if (this.change_class == 0){
+          this.change_class = 1;
+        }
+        else{
+          this.$emit('input', '');
+          this.change_class = 0;
+        }
+      }
+    }
+});
+</script>
+</html>

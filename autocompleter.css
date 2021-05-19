@@ -1,0 +1,73 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 0 0 0 0;
+}
+
+.home #top {
+	margin: 150px 50px 50px 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.results #top {
+	margin: 20px 0px 0px 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items:flex-start;
+}
+
+.vue-autocompleter .bottom_border{
+	border-bottom: 1px solid #ddd;
+	width: 94%;
+    height: 1px;
+    margin: -1px auto;
+}
+
+.results .vue-autocompleter {
+	margin: 30px 0 0 30px;
+	order: 2;
+}
+
+.vue-autocompleter {
+	border: 1px solid rgb(197, 197, 197);
+	border-radius: 25px;
+	outline: none;
+	cursor: auto;
+}
+
+.vue-autocompleter:hover {
+	border: 1px solid #fff;
+	box-shadow: 0 0 5px rgba(172, 172, 172, 0.822);
+}
+
+.vue-autocompleter .search_input {
+	font-size: 16px;
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 25px;
+	outline: none;
+	padding: 5px 15px 5px 15px;
+	width: 40vh;
+
+}
+
+.vue-autocompleter .list li {
+	background-image: url('images_google/search_icon.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 20px;
+	list-style: none;
+	margin: 0 5px 0 5px;
+	padding: 0 15px 0 30px;
+	text-align: left;
+}
+
+.thin {
+	font-weight: 500;
+}
+
+.vue-autocompleter .list li.grey_content  {
+	background-color: rgb(240, 240, 240);
+}
